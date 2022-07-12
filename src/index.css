@@ -1,0 +1,171 @@
+:root {
+  --dark-color: #292930;
+  --light-color: rgb(240, 230, 200);
+  --dark-hover-color: #090910;
+  --rounded: 6px;
+  --font-sm: 1rem;
+  --font-md: 1.4rem;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  color: black;
+}
+
+.App.dark * {
+  color: white;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.font-md {
+  font-size: 1.4rem;
+}
+
+.container {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.margin-y-sm {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.margin-y-md {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.padding-sm {
+  padding: 0.5rem;
+}
+
+.padding-x-sm {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.padding-y-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.padding-x-md {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.padding-y-md {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: var(--rounded);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(100, 100, 100, 0.4);
+}
+
+.App.dark .btn {
+  color: white;
+}
+
+hr {
+  color: var(--dark-color);
+  border: 1px var(--dark-color) solid;
+}
+
+.App.dark hr {
+  color: var(--light-color);
+  border: 1px var(--light-color) solid;
+}
+
+/* Media queries */
+@media (min-width: 500px) {
+  .container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .padding-x-sm {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .padding-y-sm {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .padding-x-md {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .padding-y-md {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

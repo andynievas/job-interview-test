@@ -1,0 +1,15 @@
+.favorite-btn .favorite-icon.active {
+  display: block;
+}
+
+.favorite-btn:hover .favorite-icon.active {
+  display: none;
+}
+
+.favorite-btn .favorite-icon.hover {
+  display: none;
+}
+
+.favorite-btn:hover .favorite-icon.hover {
+  display: block;
+}

@@ -1,0 +1,46 @@
+#spinner {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  animation: rotate-infinity linear 1.2s infinite;
+}
+
+#spinner .spacer {
+  width: 20px;
+  animation: zoom-infinity 1.8s ease infinite;
+}
+
+#spinner .dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--dark-color);
+  border-radius: 50%;
+}
+
+.App.dark #spinner .dot {
+  background-color: var(--light-color);
+}
+
+@keyframes rotate-infinity {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes zoom-infinity {
+  from {
+    width: 20px;
+  }
+
+  50% {
+    width: 50px;
+  }
+
+  to {
+    width: 20px;
+  }
+}

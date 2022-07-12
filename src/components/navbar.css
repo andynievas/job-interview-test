@@ -1,0 +1,90 @@
+nav.nav-bg {
+  background-color: var(--dark-color);
+  color: black;
+}
+
+nav.nav-bg * {
+  color: white;
+}
+
+.App.dark nav.nav-bg {
+  background-color: var(--light-color);
+  color: white;
+}
+
+.App.dark nav.nav-bg * {
+  color: black;
+}
+
+nav .navbar * {
+  margin: 0;
+  padding: 0;
+}
+
+nav .navbar {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .navbar .nav-item {
+  height: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#logo-branch {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logo-branch #sw {
+  font-size: 0.8rem;
+}
+
+#logo-branch #sw span {
+  margin-right: 0.4rem;
+}
+
+.App.dark .moon-icon {
+  display: none;
+}
+
+.sun-icon {
+  display: none;
+}
+
+.App.dark .sun-icon {
+  display: block;
+}
+
+#favorites-link span {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  #favorites-link span {
+    display: initial;
+  }
+}
+
+@media (min-width: 700px) {
+  #logo-branch #sw span {
+    font-size: 1.6rem;
+  }
+
+  #logo-branch {
+    flex-direction: initial;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
