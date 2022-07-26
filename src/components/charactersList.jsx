@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Spinner from "./spinner";
 import StarIcon from "./starIcon";
 
-function Characters({ list, favorites = [] }) {
+function Characters({ list, favorites = [], isLoading=false }) {
   const getId = url => {
     const { pathname } = new URL(url);
     return pathname.substring(12, pathname.length - 1)
@@ -12,7 +12,8 @@ function Characters({ list, favorites = [] }) {
 
   return <div className="container" >
     <div className="characters-list" >
-      {list ? list.map(character => <Link
+      {isLoading ? <Spinner />
+       : list ? list.map(character => <Link
         className="character hover half-width-and-equal-gaps"
         to={`/character/${getId(character.url)}`}
         key={character.url} >
@@ -25,7 +26,7 @@ function Characters({ list, favorites = [] }) {
         <span>Gender: {capitalize(character.gender)}</span>
         <span className="separator" > | </span>
         <span>Birth date: {character.birth_year}</span>
-      </Link>) : <Spinner></Spinner>}
+      </Link>) : <div>Empty list</div>}
 
     </div>
   </div>
